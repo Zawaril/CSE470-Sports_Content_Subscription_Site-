@@ -17,7 +17,7 @@ class HomeController extends Controller
 
             if(Auth::user()->type=='0'){
 
-                return view('dashboard');
+                return view('user.home');
             }
             else{
 
@@ -34,5 +34,14 @@ class HomeController extends Controller
 
             return redirect()->back();
         }
+    }
+
+
+    public function index()
+    {
+        return view('newDashboard');
+
+
+
     }
 }
